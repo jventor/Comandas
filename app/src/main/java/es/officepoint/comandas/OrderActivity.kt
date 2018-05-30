@@ -3,6 +3,7 @@ package es.officepoint.comandas
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import es.officepoint.comandas.adapter.OrderAdapter
+import es.officepoint.comandas.model.Dish
 import es.officepoint.comandas.model.Tables
 import kotlinx.android.synthetic.main.activity_table_detail.*
 
@@ -16,5 +17,11 @@ class OrderActivity : AppCompatActivity() {
         tableName.text = Tables.tables[tableId].name
 
         lvOrder.adapter = OrderAdapter(Tables.tables[tableId].order)
+
+        btnAddDish.setOnClickListener {
+            Tables.tables[tableId].order.add(Dish("Pizza",5.99F,""))
+            (lvOrder.adapter as OrderAdapter).notifyDataSetChanged()
+
+        }
     }
 }
