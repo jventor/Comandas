@@ -1,6 +1,8 @@
 package es.officepoint.comandas.adapter
 
 import android.content.Context
+import android.graphics.Color
+import android.support.constraint.ConstraintLayout
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -16,7 +18,7 @@ class TablesAdapter(private var context: Context, private var tablesList: List<T
         val vh: ListRowHolder
 
         if (p1 == null) {
-            view = LayoutInflater.from(context).inflate(R.layout.table_list_row, p2, false)
+            view = LayoutInflater.from(context).inflate(R.layout.item_table, p2, false)
             vh = ListRowHolder(view)
             view.tag = vh
         } else {
@@ -24,7 +26,12 @@ class TablesAdapter(private var context: Context, private var tablesList: List<T
             vh = view.tag as ListRowHolder
         }
 
+
         vh.tableName.text = tablesList[p0].name
+        if (tablesList[p0].order.size == 0){
+            vh.container.setBackgroundColor(Color.LTGRAY)
+        }
+
         return view
     }
 
@@ -42,5 +49,6 @@ class TablesAdapter(private var context: Context, private var tablesList: List<T
 
     private class ListRowHolder(row: View?) {
         public val tableName = row?.findViewById(R.id.tableName) as TextView
+        public val container = row?.findViewById(R.id.container) as ConstraintLayout
     }
 }

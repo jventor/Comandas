@@ -3,9 +3,15 @@ package es.officepoint.comandas.model
 object Tables {
     val tables : List<Table> = listOf(
             Table("Mesa 1", mutableListOf()),
-            Table("Mesa 2", mutableListOf()),
+            Table("Mesa 2", mutableListOf(
+                    Dish("Paella", 10.9F, "Sin marisco")
+            )),
             Table("Mesa 3", mutableListOf()),
-            Table("Mesa 4", mutableListOf())
+            Table("Mesa 4", mutableListOf()),
+            Table("Mesa 5", mutableListOf()),
+            Table("Mesa 6", mutableListOf()),
+            Table("Mesa 7", mutableListOf()),
+            Table("Mesa 8", mutableListOf())
     )
 
     val count
