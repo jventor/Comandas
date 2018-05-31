@@ -23,4 +23,9 @@ class TablesListActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
+
+    override fun onRestart() {
+        super.onRestart()
+        (lvTables.adapter as TablesAdapter).notifyDataSetChanged()
+    }
 }

@@ -3,7 +3,7 @@ package es.officepoint.comandas.model
 import java.util.*
 
 data class Table (var name: String,
-                  var order: MutableList<Dish>){
+                  var orders: MutableList<Order>){
 
     val id : String = UUID.randomUUID().toString()
 }

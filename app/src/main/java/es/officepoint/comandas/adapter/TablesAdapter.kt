@@ -28,8 +28,11 @@ class TablesAdapter(private var context: Context, private var tablesList: List<T
 
 
         vh.tableName.text = tablesList[p0].name
-        if (tablesList[p0].order.size == 0){
+        if (tablesList[p0].orders.size == 0){
             vh.container.setBackgroundColor(Color.LTGRAY)
+        }
+        else{
+            vh.container.setBackgroundColor(Color.WHITE)
         }
 
         return view

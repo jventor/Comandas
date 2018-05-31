@@ -4,7 +4,7 @@ object Tables {
     val tables : List<Table> = listOf(
             Table("Mesa 1", mutableListOf()),
             Table("Mesa 2", mutableListOf(
-                    Dish("Paella", 10.9F, "Sin marisco")
+                    Order(DishesRepo.dishes.first())
             )),
             Table("Mesa 3", mutableListOf()),
             Table("Mesa 4", mutableListOf()),
