@@ -29,8 +29,8 @@ class OrderAdapter (private val order: List<Order>) : BaseAdapter(){
         }
         vh.dishName.text = order[p0].dish.name
         vh.dishIcon.setImageResource(order[p0].dish.icon)
-        val priceText = order[p0].dish.price.toString() + " €"
-        vh.dishPrice.text = priceText
+       //val priceText = order[p0].dish.price.toString() + " €"
+        vh.dishPrice.text = order[p0].dish.getPriceString()
         vh.dishVariant.text = "Los caphicos de la gente a la hora de comer"
 
         return view

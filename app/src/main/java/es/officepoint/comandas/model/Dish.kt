@@ -29,9 +29,13 @@ data class Dish (val name: String,
 
     val id : String = UUID.randomUUID().toString()
 
+    fun getPriceString(): String {
+        return "%.2f".format(price)+" €"
+    }
+
     companion object {
         private val allergens = mapOf(
-                Pair(AllergenEnum.GLUTEN, R.drawable.ic_alergeno_01_gluten),
+                Pair(AllergenEnum.GLUTEN, R.id.allergen01),
                 Pair(AllergenEnum.CRUSTACEOS,R.drawable.ic_alergeno_02_crustaceos),
                 Pair(AllergenEnum.HUEVO, R.drawable.ic_alergeno_03_huevo),
                 Pair(AllergenEnum.CRUSTACEOS,R.drawable.ic_alergeno_04_pescado),
@@ -47,8 +51,10 @@ data class Dish (val name: String,
                 Pair(AllergenEnum.MOLUSCOS,R.drawable.ic_alergeno_14_moluscos)
         )
 
-        fun getIcon(allergen: AllergenEnum) : Int? {
-            return allergens.get(allergen)
+        fun getIcon(allergen: AllergenEnum) : Int {
+            return allergens.get(allergen)!!
         }
+
+
     }
 }

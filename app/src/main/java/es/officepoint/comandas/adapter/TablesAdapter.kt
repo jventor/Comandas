@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
+import android.widget.ImageView
 import android.widget.TextView
 import es.officepoint.comandas.R
 import es.officepoint.comandas.model.Table
@@ -29,10 +30,13 @@ class TablesAdapter(private var context: Context, private var tablesList: List<T
 
         vh.tableName.text = tablesList[p0].name
         if (tablesList[p0].orders.size == 0){
-            vh.container.setBackgroundColor(Color.LTGRAY)
+            //vh.container.setBackgroundColor(Color.LTGRAY)
+            vh.tableIcon.alpha = 0.3F
+
         }
         else{
-            vh.container.setBackgroundColor(Color.WHITE)
+            //vh.container.setBackgroundColor(Color.WHITE)
+            vh.tableIcon.alpha = 1F
         }
 
         return view
@@ -53,5 +57,6 @@ class TablesAdapter(private var context: Context, private var tablesList: List<T
     private class ListRowHolder(row: View?) {
         public val tableName = row?.findViewById(R.id.tableName) as TextView
         public val container = row?.findViewById(R.id.container) as ConstraintLayout
+        public val tableIcon = row?.findViewById(R.id.tableIcon) as ImageView
     }
 }

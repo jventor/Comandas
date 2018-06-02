@@ -16,9 +16,9 @@ class TablesListActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         lvTables.adapter = TablesAdapter(this, Tables.tables)
         lvTables.onItemClickListener = AdapterView.OnItemClickListener { adapterView, view, position, id ->
-            Toast.makeText(this, "Click on " + Tables.tables[position].name, Toast.LENGTH_SHORT).show()
+            //Toast.makeText(this, "Click on " + Tables.tables[position].name, Toast.LENGTH_SHORT).show()
 
-            var intent = Intent(this, OrderActivity::class.java)
+            val intent = Intent(this, OrderActivity::class.java)
             intent.putExtra("table_id", position)
             startActivity(intent)
         }
