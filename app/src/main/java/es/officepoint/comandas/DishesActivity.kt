@@ -14,6 +14,7 @@ import es.officepoint.comandas.adapter.DishAdapter
 import es.officepoint.comandas.model.Dish
 import es.officepoint.comandas.model.DishesRepo
 import kotlinx.android.synthetic.main.activity_dishes.*
+import kotlinx.android.synthetic.main.activity_tables.*
 
 class DishesActivity : AppCompatActivity() {
 
@@ -67,3 +68,4 @@ companion object {
         b.show()
     }
 }
+
