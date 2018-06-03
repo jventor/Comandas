@@ -32,7 +32,6 @@ companion object {
         lvDishes.adapter = DishAdapter(this)
         lvDishes.onItemClickListener = AdapterView.OnItemClickListener { _, _, position, _ ->
             showDishDialog(DishesRepo.dishes[position])
-
         }
     }
 

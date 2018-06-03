@@ -45,16 +45,10 @@ class DishAdapter (private val context: Context) : BaseAdapter(){
         else{
             vh.container.setBackgroundColor(Color.WHITE)
         }
-/*
-        DishesRepo.dishes[p0].allergen.forEach {
-            vh.allergens[it.ordinal].alpha = 1.0F
-        }
-*/
 
         DishesRepo.dishes[p0].allergen.forEach {
             vh.allergens[it.ordinal].visibility = View.VISIBLE
         }
-
 
         return view
     }
@@ -93,5 +87,4 @@ class DishAdapter (private val context: Context) : BaseAdapter(){
                 row.findViewById(R.id.allergen14) as ImageView
         )
     }
-
 }

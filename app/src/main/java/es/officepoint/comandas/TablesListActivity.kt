@@ -9,7 +9,6 @@ import kotlinx.android.synthetic.main.activity_tables.*
 
 class TablesListActivity : AppCompatActivity(), TablesFragment.OnItemClickListener {
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tables)
@@ -22,7 +21,7 @@ class TablesListActivity : AppCompatActivity(), TablesFragment.OnItemClickListen
                     .add(R.id.listTableContainer, fragment)
                     .commit()
 
-        lvTables?.adapter = TablesAdapter(this, Tables.tables)
+        lvTables.adapter = TablesAdapter(this, Tables.tables)
     }
 
     override fun onRestart() {
@@ -38,17 +37,17 @@ class TablesListActivity : AppCompatActivity(), TablesFragment.OnItemClickListen
             showTableDetail(tableId)
     }
 
+    private fun isDetailViewAvailable() = detailContainer != null
+
     private fun showFragmentsDetail(tableId: Int) {
         val orderFragment = OrderFragment()
         val args = Bundle()
         args.putInt("table_id", tableId)
         orderFragment.arguments = args
         supportFragmentManager.beginTransaction()
-                .replace(R.id.detailContainer, orderFragment, "TagOrder")
+                .replace(R.id.detailContainer, orderFragment)
                 .commit()
     }
-
-    private fun isDetailViewAvailable() = detailContainer != null
 
     private fun showTableDetail(tableId : Int){
         val intent = Intent(this, OrderActivity::class.java)

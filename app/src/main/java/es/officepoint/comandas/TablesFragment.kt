@@ -24,7 +24,6 @@ class TablesFragment: Fragment() {
             clickListener = context
         else
             throw IllegalArgumentException("Attached activity doesn't implement TablesFragment.OnItemClickListener")
-
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -34,13 +33,9 @@ class TablesFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        lvTables?.adapter = TablesAdapter(context!!, Tables.tables)
-        lvTables?.onItemClickListener = AdapterView.OnItemClickListener { _, _, position, _->
-            //Toast.makeText(this, "Click on " + Tables.tables[position].name, Toast.LENGTH_SHORT).show()
+        lvTables.adapter = TablesAdapter(context!!, Tables.tables)
+        lvTables.onItemClickListener = AdapterView.OnItemClickListener { _, _, position, _->
             clickListener.onItemClicked(position)
-          //  val intent = Intent(context, OrderActivity::class.java)
-           // intent.putExtra("table_id", position)
-            //startActivity(intent)
         }
     }
 

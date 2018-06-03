@@ -55,7 +55,5 @@ data class Dish (val name: String,
         fun getIcon(allergen: AllergenEnum) : Int {
             return allergens[allergen]!!
         }
-
-
     }
 }
