@@ -35,6 +35,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:clickable="true"
+        android:focusable="true"
+        app:srcCompat="@drawable/ic_add"
         android:translationX="-10dp"
         android:translationY="-10dp"
         app:backgroundTint="@color/colorAccent" />

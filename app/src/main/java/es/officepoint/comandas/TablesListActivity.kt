@@ -8,8 +8,9 @@ import android.widget.Toast
 import es.officepoint.comandas.adapter.TablesAdapter
 import es.officepoint.comandas.model.Tables
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.item_table.*
 
-class TablesListActivity : AppCompatActivity() {
+class TablesListActivity : AppCompatActivity(){
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

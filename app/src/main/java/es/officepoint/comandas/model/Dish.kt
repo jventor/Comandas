@@ -1,6 +1,7 @@
 package es.officepoint.comandas.model
 
 import es.officepoint.comandas.R
+import es.officepoint.comandas.toString
 import java.util.*
 
 enum class AllergenEnum {
@@ -29,8 +30,8 @@ data class Dish (val name: String,
 
     val id : String = UUID.randomUUID().toString()
 
-    fun getPriceString(): String {
-        return "%.2f".format(price)+" €"
+    fun getPriceString(currency : String): String {
+        return price.toString(currency)
     }
 
     companion object {
@@ -52,7 +53,7 @@ data class Dish (val name: String,
         )
 
         fun getIcon(allergen: AllergenEnum) : Int {
-            return allergens.get(allergen)!!
+            return allergens[allergen]!!
         }
 
 

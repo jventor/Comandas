@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Comandas</string>
+    <string name="currency">€</string>
+    <string name="Add">Add</string>
+    <string name="Cancel">Cancel</string>
+    <string name="dish_selection">Dish selection</string>
+    <string name="Delete">Delete</string>
+    <string name="Accept">Accept</string>
+    <string name="Charge">Charge</string>
+    <string name="Bill">Bill</string>
+    <string name="variants">Variants</string>
+    <string name="dish_image">Dish image</string>
+    <string name="allergen_icon">Allergen icon</string>
+    <string name="table_image">Table image</string>
 </resources>

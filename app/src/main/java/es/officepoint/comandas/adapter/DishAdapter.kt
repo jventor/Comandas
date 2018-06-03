@@ -10,12 +10,16 @@ import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.TextView
 import es.officepoint.comandas.R
-import es.officepoint.comandas.model.AllergenEnum
+import android.content.Context
 import es.officepoint.comandas.model.Dish
+
 import es.officepoint.comandas.model.DishesRepo
 import kotlinx.android.synthetic.main.item_dish.view.*
 
-class DishAdapter : BaseAdapter(){
+class DishAdapter (private val context: Context) : BaseAdapter(){
+
+    lateinit var dish : Dish
+
     override fun getView(p0: Int, p1: View?, p2: ViewGroup): View {
         val view: View
         val vh : DishViewHolder
@@ -29,20 +33,19 @@ class DishAdapter : BaseAdapter(){
             view = p1
             vh = view.tag as DishViewHolder
         }
+        dish = DishesRepo.dishes[p0]
 
-        vh.dishName.text = DishesRepo.dishes[p0].name
-        vh.dishIcon.setImageResource(DishesRepo.dishes[p0].icon)
-        val textPrice = "${DishesRepo.dishes[p0].price} €"
-        vh.dishPrice.text = DishesRepo.dishes[p0].getPriceString()
+        vh.dishName.text = dish.name
+        vh.dishIcon.setImageResource(dish.icon)
+        vh.dishPrice.text = dish.getPriceString(context.getString(R.string.currency))
 
         if (p0 % 2 == 0) {
-            vh.container.setBackgroundColor(ContextCompat.getColor(p2.context, R.color.colorLightGray))
+            vh.container.setBackgroundColor(ContextCompat.getColor(context, R.color.colorLightGray))
         }
         else{
             vh.container.setBackgroundColor(Color.WHITE)
         }
 
-        //( as ImageView).visibility = View.INVISIBLE
         DishesRepo.dishes[p0].allergen.forEach {
             vh.allergens[it.ordinal].alpha = 1.0F
         }
@@ -51,7 +54,7 @@ class DishAdapter : BaseAdapter(){
     }
 
     override fun getItem(p0: Int): Any {
-        return DishesRepo.dishes[p0]
+        return dish
     }
 
     override fun getItemId(p0: Int): Long {

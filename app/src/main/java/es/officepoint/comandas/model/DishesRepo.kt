@@ -3,7 +3,7 @@ package es.officepoint.comandas.model
 import es.officepoint.comandas.R
 
 object DishesRepo {
-    public val dishes : List<Dish> = listOf(
+    val dishes : List<Dish> = listOf(
             Dish("Refrescos", 2.0F, R.drawable.d_refrescos),
             Dish("Vino", 7.0F, R.drawable.d_vino, listOf(AllergenEnum.SULFITOS) ),
             Dish("Mojito",5.0F, R.drawable.d_mojito),
@@ -23,4 +23,6 @@ object DishesRepo {
             Dish("Tiramisu", 4.95F, R.drawable.d_tiramisu, listOf(AllergenEnum.GLUTEN)),
             Dish("Cafe",1.0F, R.drawable.d_cafe)
     )
+
+    fun getIndex(dish: Dish) = dishes.indexOf(dish)
 }

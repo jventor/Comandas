@@ -23,7 +23,8 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_table" />
+        app:srcCompat="@drawable/ic_table"
+        android:contentDescription="@string/dish_image" />
 
     <TextView
         android:id="@+id/dishName"
@@ -80,7 +81,8 @@
             android:layout_weight="1"
             android:minHeight="24dp"
             android:minWidth="24dp"
-            android:src="@drawable/ic_alergeno_01_gluten" />
+            android:src="@drawable/ic_alergeno_01_gluten"
+            android:contentDescription="@string/allergen_icon" />
 
         <ImageView
             android:id="@+id/allergen02"
@@ -90,7 +92,8 @@
             android:layout_weight="1"
             android:minHeight="24dp"
             android:minWidth="24dp"
-            android:src="@drawable/ic_alergeno_02_crustaceos" />
+            android:src="@drawable/ic_alergeno_02_crustaceos"
+            android:contentDescription="@string/allergen_icon" />
 
         <ImageView
             android:id="@+id/allergen03"
@@ -100,7 +103,8 @@
             android:layout_weight="1"
             android:minHeight="24dp"
             android:minWidth="24dp"
-            android:src="@drawable/ic_alergeno_03_huevo" />
+            android:src="@drawable/ic_alergeno_03_huevo"
+            android:contentDescription="@string/allergen_icon" />
 
         <ImageView
             android:id="@+id/allergen04"
@@ -110,7 +114,8 @@
             android:layout_weight="1"
             android:minHeight="24dp"
             android:minWidth="24dp"
-            android:src="@drawable/ic_alergeno_04_pescado" />
+            android:src="@drawable/ic_alergeno_04_pescado"
+            android:contentDescription="@string/allergen_icon" />
 
         <ImageView
             android:id="@+id/allergen05"
@@ -120,7 +125,8 @@
             android:layout_weight="1"
             android:minHeight="24dp"
             android:minWidth="24dp"
-            android:src="@drawable/ic_alergeno_05_cacahuete" />
+            android:src="@drawable/ic_alergeno_05_cacahuete"
+            android:contentDescription="@string/allergen_icon" />
 
         <ImageView
             android:id="@+id/allergen06"
@@ -130,7 +136,8 @@
             android:layout_weight="1"
             android:minHeight="24dp"
             android:minWidth="24dp"
-            android:src="@drawable/ic_alergeno_06_soja" />
+            android:src="@drawable/ic_alergeno_06_soja"
+            android:contentDescription="@string/allergen_icon" />
 
         <ImageView
             android:id="@+id/allergen07"
@@ -140,7 +147,8 @@
             android:layout_weight="1"
             android:minHeight="24dp"
             android:minWidth="24dp"
-            android:src="@drawable/ic_alergeno_07_lacteos" />
+            android:src="@drawable/ic_alergeno_07_lacteos"
+            android:contentDescription="@string/allergen_icon" />
     </LinearLayout>
 
     <LinearLayout
@@ -168,7 +176,8 @@
             android:layout_weight="1"
             android:minHeight="24dp"
             android:minWidth="24dp"
-            android:src="@drawable/ic_alergeno_08_frutos_secos" />
+            android:src="@drawable/ic_alergeno_08_frutos_secos"
+            android:contentDescription="@string/allergen_icon" />
 
         <ImageView
             android:id="@+id/allergen09"
@@ -178,7 +187,8 @@
             android:layout_weight="1"
             android:minHeight="24dp"
             android:minWidth="24dp"
-            android:src="@drawable/ic_alergeno_09_apio" />
+            android:src="@drawable/ic_alergeno_09_apio"
+            android:contentDescription="@string/allergen_icon" />
 
         <ImageView
             android:id="@+id/allergen10"
@@ -188,7 +198,8 @@
             android:layout_weight="1"
             android:minHeight="24dp"
             android:minWidth="24dp"
-            android:src="@drawable/ic_alergeno_10_mostaza" />
+            android:src="@drawable/ic_alergeno_10_mostaza"
+            android:contentDescription="@string/allergen_icon" />
 
         <ImageView
             android:id="@+id/allergen11"
@@ -198,7 +209,8 @@
             android:layout_weight="1"
             android:minHeight="24dp"
             android:minWidth="24dp"
-            android:src="@drawable/ic_alergeno_11_sesamo" />
+            android:src="@drawable/ic_alergeno_11_sesamo"
+            android:contentDescription="@string/allergen_icon" />
 
         <ImageView
             android:id="@+id/allergen12"
@@ -208,7 +220,8 @@
             android:layout_weight="1"
             android:minHeight="24dp"
             android:minWidth="24dp"
-            android:src="@drawable/ic_alergeno_12_sulfitos" />
+            android:src="@drawable/ic_alergeno_12_sulfitos"
+            android:contentDescription="@string/allergen_icon" />
 
         <ImageView
             android:id="@+id/allergen13"
@@ -218,7 +231,8 @@
             android:layout_weight="1"
             android:minHeight="24dp"
             android:minWidth="24dp"
-            android:src="@drawable/ic_alergeno_13_altramuces" />
+            android:src="@drawable/ic_alergeno_13_altramuces"
+            android:contentDescription="@string/allergen_icon" />
 
         <ImageView
             android:id="@+id/allergen14"
@@ -228,7 +242,8 @@
             android:layout_weight="1"
             android:minHeight="24dp"
             android:minWidth="24dp"
-            android:src="@drawable/ic_alergeno_14_moluscos" />
+            android:src="@drawable/ic_alergeno_14_moluscos"
+            android:contentDescription="@string/allergen_icon" />
     </LinearLayout>
 
 
